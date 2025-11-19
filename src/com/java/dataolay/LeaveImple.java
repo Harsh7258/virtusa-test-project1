@@ -21,7 +21,7 @@ public class LeaveImple implements LeaveOps{
     @Override
     public String addLeaveDalay(LeaveModel leaves) {
         leavesList.add(leaves);
-        return "200 Leave created successfully";
+        return "201 Leave created successfully";
     }
 
     @Override
@@ -38,9 +38,9 @@ public class LeaveImple implements LeaveOps{
         LeaveModel voter = searchLeavesDalay(id);
         if(voter != null){
             leavesList.remove(id);
-            return "Deleted leave details successfully!!";
+            return "200 Deleted leave details successfully!!";
         } else {
-            return "No leave found!!";
+            return "404 No leave found!!";
         }
     }
 
@@ -55,9 +55,9 @@ public class LeaveImple implements LeaveOps{
             leave.setNoOfDays(model.getNoOfDays());
             leave.setAppliedOn(model.getAppliedOn());
             leave.setLeaveReason(model.getLeaveReason());
-            return "Leave details updated successfully!!";
+            return "200 Leave details updated successfully!!";
         } else {
-            return "Leave id not found!!";
+            return "404 Leave id not found!!";
         }
     }
 }

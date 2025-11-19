@@ -57,24 +57,24 @@ public class LeaveOpsBalay {
 
         // leaveStartDate cannot be yesterday
         if(start.equals(yest)){ // nullpointerexception
-            errStr.append("Leave Start Date cannot be yesterday!!");
+            errStr.append("400 Leave Start Date cannot be yesterday!!");
             valid = false;
         }
         if(end.equals(yest)){ // leaveEndDate cannot be Yesterday
-            errStr.append("Leave End Date cannot be Yesterday!!");
+            errStr.append("400 Leave End Date cannot be Yesterday!!");
             valid = false;
         }
         if(start.after(end)){ // leaveStartDate cannot be greater than leaveEndDate
-            errStr.append("leave Start Date cannot be greater than leave End Date");
+            errStr.append("400 leave Start Date cannot be greater than leave End Date");
             valid = false;
         }
 
         if(model.getLeaveId() < 0){
-            errStr.append("Leave can not be negative!!");
+            errStr.append("400 Leave ID can not be negative!!");
             valid=false;
         }
         if (model.getEmpoId() < 0){
-            errStr.append("Employ can not be negative!!");
+            errStr.append("400 Employ ID can not be negative!!");
             valid=false;
         }
 
