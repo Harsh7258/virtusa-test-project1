@@ -77,4 +77,17 @@ public class LeaveModel {
     public void setLeaveReason(String leaveReason) {
         this.leaveReason = leaveReason;
     }
+
+    @Override
+    public String toString() {
+        return "LeaveModel{" +
+                "leaveId=" + leaveId +
+                ", empoId=" + empoId +
+                ", leaveStartDate=" + leaveStartDate +
+                ", leaveEndDate=" + leaveEndDate +
+                ", noOfDays=" + noOfDays +
+                ", appliedOn=" + appliedOn +
+                ", leaveReason='" + leaveReason + '\'' +
+                '}';
+    }
 }
